@@ -12,14 +12,19 @@ uint16_t min_distance, max_distance;
 
 void setup()
 {
+  Serial.begin(115200);
+  Serial.println("Starting BLE work!");
   min_distance = 30;
   max_distance = 600;
   bleMouse.begin();
+  Serial.println("Started");
 }
 
 void loop()
 {
-
+  if(bleMouse.isConnected()) {
+    Serial.println("Connected");
+  }
   int distance = random(min_distance, max_distance);
   int x = random(X_RANDOM_RANGE) - 1;
   int y = random(Y_RANDOM_RANGE) - 1;
