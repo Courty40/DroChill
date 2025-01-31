@@ -4,7 +4,7 @@
 #define X_RANDOM_RANGE 3
 #define Y_RANDOM_RANGE 3
 
-BleMouse bleMouse("DroChill Mouse Jiggler v1");
+BleMouse bleMouse("Courty Mouse Jiggler v1");
 
 int move_interval = 12; // with lower interval  notify(): << esp_ble_gatts_send_ notify: rc=-1 Unknown ESP_ERR error appears
 int loop_interval = MINUTE * 1;
